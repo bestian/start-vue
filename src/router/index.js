@@ -21,15 +21,21 @@ export default new Router({
       name: 'Start',
       component: Start
     },
-    { path: '/dig',
+    {
+      path: '/dig',
       name: 'Dig',
-      component: Dig },
-    { path: '/more/basic',
+      component: Dig
+    },
+    {
+      path: '/more/basic',
       name: 'Basic',
-      component: Basic },
-    { path: '/more/community',
+      component: Basic
+    },
+    {
+      path: '/more/community',
       name: 'Community',
-      component: Community }
+      component: Community
+    }
   //  { path: '/comment',
   //    name: 'Comment',
   //    component: Comment }

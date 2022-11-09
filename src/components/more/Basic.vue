@@ -1,4 +1,4 @@
-<template lang="jade">
+<template lang="pug">
   .basic
     h1 {{ msg }}
     .ui.container
@@ -69,7 +69,7 @@
 
 <script>
 export default {
-  name: 'basic',
+  name: 'BasicBasic',
   data () {
     return {
       msg: '從頭開始'
@@ -79,12 +79,10 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-
-$c: #42b983;
+<style lang="css" scoped>
 
 h1, h3 {
-  color: $c;
+  color: #42b983;
 }
 
 p {

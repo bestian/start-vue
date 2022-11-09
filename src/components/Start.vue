@@ -1,4 +1,4 @@
-<template lang="jade">
+<template lang="pug">
   .start
     measure(:list="items", :m="1")
     h1 {{ msg }}
@@ -28,7 +28,7 @@ import measure from './measure'
 import checker from '../mixins/checker.js'
 
 export default {
-  name: 'Start',
+  name: 'StartStart',
   props: ['items', 'p'], // , 'checkedFirst'
   mixins: [checker],
   components: {
@@ -41,7 +41,6 @@ export default {
     }
   },
   methods: {
-    // ...
   }
 }
 </script>

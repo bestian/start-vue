@@ -1,4 +1,4 @@
-<template lang="jade">
+<template lang="pug">
   .c
     .ui.container
       form.ui.comment.form
@@ -54,7 +54,7 @@ var config = {
 var db = firebase.initializeApp(config).database()
 
 export default {
-  name: 'Comment',
+  name: 'CommentCom',
   firebase: {
     anArray: db.ref('test-comments').limitToLast(25)
   },

@@ -1,4 +1,4 @@
-<template lang="jade">
+<template lang="pug">
   .start
     measure(:list="advs", :m="1")
     h1 {{ msg }}
@@ -26,7 +26,7 @@ import measure from './measure'
 import checker from '../mixins/checker.js'
 
 export default {
-  name: 'Dig',
+  name: 'DigDig',
   props: ['advs', 'p'],
   mixins: [checker],
   components: {

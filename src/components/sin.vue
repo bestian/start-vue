@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="rhyme" v-for = "r in 200" v-if="r < 70 || r > 130" v-bind:key="r">
+    <div class="rhyme" v-for = "r in ar(200)" v-bind:key="r">
       <div class="dot"
         :style="{top: 50+Math.sin(r*3.14/200*2)*55+'vh',
                  left:r/2+'%',
@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: 'SinSin',
   props: {
     color: {
       type: String,
@@ -32,6 +33,17 @@ export default {
     }
   },
   methods: {
+    ar (n) {
+      var ans = []
+      var i = 0
+      while (i < n) {
+        if (i < 70 || i > 130) {
+          ans.push(i)
+        }
+        i++
+      }
+      return ans
+    },
     countZ (r) {
       var z = 40 - Math.abs(r - 100)
       return z

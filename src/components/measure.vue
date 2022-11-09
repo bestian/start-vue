@@ -1,4 +1,4 @@
-<template lang="jade">
+<template lang="pug">
   .hi
     .right.bar
       .door(:style="{bottom:countBar(list,m)*10+'%'}")
@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: 'MeMe',
   props: ['m', 'list'],
   data () {
     return {

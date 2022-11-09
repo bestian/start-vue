@@ -1,4 +1,4 @@
-<template lang="jade">
+<template lang="pug">
 #app
   sin
   nav.ui.four.item.menu
@@ -40,7 +40,7 @@ export default {
   },
   data: function () {
     return {
-      p: {p: 0},
+      p: { p: 0 },
       items: items,
       advs: advs
     }

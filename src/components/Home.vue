@@ -1,4 +1,4 @@
-<template lang="jade">
+<template lang="pug">
   .hello
     img.logo(src="../assets/logo.png")
     h2 {{msg}}
@@ -24,6 +24,7 @@
 
 <script>
 export default {
+  name: 'HomeHome',
   data () {
     return {
       msg: 'Vue是什麼?'
