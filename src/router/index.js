@@ -1,27 +1,37 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Router from 'vue-router'
+import Home from '@/components/Home'
+import Start from '@/components/Start'
+import Dig from '../components/Dig'
+import Basic from '../components/more/Basic'
+import Community from '../components/more/Community'
+// import Comment from '../components/Comment'
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
-
-const router = new VueRouter({
-  routes
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/start',
+      name: 'Start',
+      component: Start
+    },
+    { path: '/dig',
+      name: 'Dig',
+      component: Dig },
+    { path: '/more/basic',
+      name: 'Basic',
+      component: Basic },
+    { path: '/more/community',
+      name: 'Community',
+      component: Community }
+  //  { path: '/comment',
+  //    name: 'Comment',
+  //    component: Comment }
+  ]
 })
-
-export default router

@@ -1,0 +1,147 @@
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+.start {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  color: #42b983;
+}
+
+.red {
+  color: red;
+}
+
+.list {
+  width: 50%;
+  min-width: 300px;
+  font-size: 1rem;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list .item:not(.active) {
+  color: gray;
+  a {
+    color: #aca !important;
+  }
+}
+
+.list .item.active a {
+  text-decoration: underline !important;
+}
+
+.list .item input{
+  margin-right: 5px;
+}
+
+.right.bar {
+  $t: 0;
+  position: fixed;
+    z-index: 9998;
+  top: $t;
+  left: 0;
+  //right: 0;
+  bottom: 0;
+  width: 10px;
+  width: 1vmax;
+  border-right: 1px solid green;
+  background-color: green;
+  background-image:linear-gradient(red, yellow, green);
+  .door {
+    position: fixed;
+    z-index: 9999;
+    top: $t;
+    background-color: white;
+    width: 10px;
+    width: 1vmax;
+    border-top: 1px solid green;
+    border-right: 1px solid green;
+    border-radius: 0 0 3px 3px;
+    transition: bottom 0.5s ease; 
+  }
+}
+
+p.choice {
+  font-size: 1rem;
+  input {
+    margin-left: 10px;
+    margin-right: 3px;
+    position: relative;
+    top: -1px;
+  }
+}
+
+i.icon, i.icon::before {
+  text-decoration: none;
+}
+
+i.chevron.right.icon {
+  animation:dada 1s ease 3;
+}
+
+@keyframes dada {
+  0% {position: relative; left: 0}
+  50% {position: relative; left: 0.25em}
+  100% {position: relative; left: 0}
+}
+
+.list-leave {
+}
+.list-leave-active {
+  margin: 0;
+  height: 0;
+  transform: translateX(50vw) rotateX(90deg);
+  transition: all 1s;
+}
+
+.list-enter {
+  opacity: 0;  
+  transform: translateY(30px) rotateX(90deg);
+}
+
+.list-enter-active {
+  transition: all .5s;
+}
